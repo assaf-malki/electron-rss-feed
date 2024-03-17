@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RSS Feed Viewer</title>
+    <style>
+        .rss-card {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #remove-all-btn {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            padding: 10px;
+            background-color: #2196F3;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div id="feed-container"></div>
+<button id="remove-all-btn">Remove All</button>
+<script>var exports = {};</script>
+<script src="renderer.js"></script>
+</body>
+</html>

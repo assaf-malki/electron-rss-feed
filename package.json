@@ -1,0 +1,30 @@
+{
+  "name": "electron_rss_feed",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron dist",
+    "build": "rimraf --glob dist/* && tsc && copy \"index.html\" \"./dist/\" && copy \"package.json\" \"./dist/\"",
+    "build_app": "rimraf --glob app/* && npx electron-packager dist rss-feeder --platform=win32 --arch=x64 --out app",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write '**/*.{ts,json}'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/electron": "^1.6.10",
+    "@types/node": "^20.11.27",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "electron": "^29.1.4",
+    "electron-packager": "^17.1.2",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2",
+    "rimraf": "^5.0.5"
+  }
+}
